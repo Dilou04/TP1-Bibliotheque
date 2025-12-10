@@ -5,8 +5,4 @@ std::string Emprunt::getDateEmprunt(){
     return dateEmprunt_;
 }
 
-#include "emprunt.h"
-
-std::string Emprunt::getDateEmprunt(){
-    return dateEmprunt_;
-}
+z
