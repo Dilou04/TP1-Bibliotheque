@@ -6,8 +6,10 @@
 
 class Lecteur{
     public:
-        Lecteur(std::string prenom, std::string nom, int id);
-        
+        Lecteur(std::string prenom, std::string nom, std::string id);
+        std::string prenom();
+        std::string nom();
+        std::string id();
         std::string getNom();
         std::string getPrenom();
         std::string getId();

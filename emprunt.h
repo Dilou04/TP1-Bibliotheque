@@ -8,6 +8,7 @@
 
 class Emprunt{
     public:
+    Emprunt(int day, int month, int year)
     Date getDateEmprunt();
     private:
         

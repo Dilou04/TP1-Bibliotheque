@@ -17,10 +17,6 @@ private:
     std::string langue_;
     std::string genre_;
     std::string isbn_;
-    std::string dayEmprunt_;
-    std::string monthEmprunt_;
-    std::string yearEmprunt_;
-
 
 public:
     std::string titre();
