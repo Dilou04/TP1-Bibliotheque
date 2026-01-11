@@ -4,14 +4,15 @@
 #include "auteur.h"
 #include "lecteur.h"
 #include "emprunt.h"
+#include "bibliotheque.h"
 
 int main(){
-    /*Date birthday(10, 19, 2010);
+    Date birthday(10, 19, 2010);
     std::string days_ = birthday.getDay();
     std::string months_ =birthday.getMonth();
     std::string year_ = birthday.getYears();
     std::cout << "L'anniversaire est le : " << days_ << "/" << months_ << "/" << year_<< std::endl;
-    */
+    
     
    
     Auteur goggins("10", "Goggins", "David", "17 février 1975");
@@ -33,6 +34,7 @@ int main(){
     Emprunt premierEmprunt(emprunt, premierLivre, dom);
     std::cout << "Le Livre " << premierEmprunt.getIsbn().getIsbn() << " a été emprunté le : " << premierEmprunt.getDateEmprunt().getDay() << " / " << premierEmprunt.getDateEmprunt().getMonth() << " / " << premierEmprunt.getDateEmprunt().getYears() << " et il a été emprunté par : " << premierEmprunt.getIdentifiant().getId() << std::endl;
     
-
+    Bibliotheque Bibliotheque(premierLivre, dom, premierEmprunt);
+    
 }
     
