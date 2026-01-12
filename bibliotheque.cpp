@@ -1,27 +1,32 @@
 #include "bibliotheque.h"
-#include "lecteur.h"
 #include "emprunt.h"
-#include "livre.h"
+#include "lecteur.h"
+#include <vector>
 
-Livre Bibliotheque::getLivre(){
-    return livre_;
+Bibliotheque::Bibliotheque(std::vector<Lecteur> lecteurs, std::vector<Livre> livres, std::vector<Emprunt> emprunts): lecteurs_(lecteurs), livres_(livres), emprunts_(emprunts){
+
 }
 
-Emprunt Bibliotheque::getEmprunt(){
-    return emprunt_;
+std::vector<Lecteur> Bibliotheque::getListeLecteurs(){
+    return lecteurs_;
 }
 
-Lecteur Bibliotheque::getLecteur(){
-    return lecteur_;
+std::vector<Livre> Bibliotheque::getListeLivres(){
+    return livres_;
 }
 
-bool Bibliotheque::isEmprunte(Livre livre, Emprunt emprunt){
-    if((livre.getIsbn() == emprunt.getIsbn().getIsbn())) return false;
-    return true;
+std::vector<Emprunt> Bibliotheque::getListeEmprunt(){
+    return emprunts_;
 }
 
-Bibliotheque::Bibliotheque(Livre livre, Lecteur lecteur, Emprunt emprunt): livre_(livre), lecteur_(lecteur), emprunt_(emprunt){
-    if (!isEmprunte(livre, emprunt)){
-        std::cout << "le livre" << livre.getTitre() << " est déjà emprunté." << std::endl;
-    }
+void Bibliotheque::addLecteur(Lecteur lec){
+    lecteurs_.push_back(lec);
+}
+
+void Bibliotheque::addLivre(Livre liv){
+    livres_.push_back(liv);
+}
+
+void Bibliotheque::addAuteur(Auteur aut){
+    auteurs_.push_back(aut);
 }
