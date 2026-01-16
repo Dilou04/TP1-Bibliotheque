@@ -19,7 +19,7 @@ int main(){
     std::string langues_ = goggins_.getLangue();
     std::string genres_ = goggins_.getGenre();
     std::string isbns_ = goggins_.getIsbn();
-    std::cout << "Le livre est : " << titres_ << " écrit par : " << goggins.getNom() << " " << goggins.getPrenom()<< " en " << langues_ << std::endl;
+    std::cout << "Le livre est : " << titres_ << " écrit par : " << goggins << " en " << langues_ << std::endl;
     std::cout << " sont isbn est : " << isbns_ << " et c'est : " << genres_ << std::endl;
 
     Lecteur dom("Dominique", "Ginhac", "16");

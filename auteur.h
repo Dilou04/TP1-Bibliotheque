@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <ostream>
 
 class Auteur{
     public:
@@ -11,6 +12,8 @@ class Auteur{
         std::string getNom();
         std::string getPrenom();
         std::string getDateNaissance();
+
+        friend std::ostream& operator<<(std::ostream& os, const Auteur& aut);
 
     private: 
         std::string identifiant_ ;
