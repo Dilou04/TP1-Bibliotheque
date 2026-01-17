@@ -31,6 +31,7 @@ int main(){
     bibliotheque.addLecteur(dom);
     bibliotheque.addLecteur(dylan);
     bibliotheque.addLecteur(didier);
+    bibliotheque.addLivre(goggins_);
     std::cout << bibliotheque << std::endl;
 }
     

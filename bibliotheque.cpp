@@ -29,9 +29,13 @@ void Bibliotheque::addAuteur(Auteur aut){
 }
 
 std::ostream& operator<<(std::ostream& os, const Bibliotheque& biblio){
-    os << "Les lecteurs sont : "; 
+    os << "Les lecteurs sont : " << std::endl;
     for (int i = 0; i < biblio.lecteurs_.size(); i++ ){
         os << biblio.lecteurs_[i] << std::endl;
+    }
+    os << "Les livres sont : " << std::endl;
+    for( int j =0; j < biblio.livres_.size(); j++){
+        os << biblio.livres_[j] << std::endl;
     }
     return os;
 }

@@ -17,6 +17,6 @@ bool Livre::isDispo(std::string isbn, std::vector<std::string> isbnLivreDispo){
 }
 
 std::ostream& operator<<(std::ostream& os, const Livre& liv){
-    os << "Le livre est : " << liv.titre_ << " écrit par : " << liv.auteur_ << " et c'est : " << liv.genre_ << " sont isbn est :" << liv.isbn_ << std::endl;
+    os << "Le livre est : " << liv.titre_  << std::endl;
     return os;
 }
