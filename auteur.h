@@ -8,11 +8,6 @@
 class Auteur{
     public:
         Auteur (std::string identifiant, std::string nom, std::string prenom, std::string datenaissance);
-        std::string getIdentifiant();
-        std::string getNom();
-        std::string getPrenom();
-        std::string getDateNaissance();
-
         friend std::ostream& operator<<(std::ostream& os, const Auteur& aut);
 
     private: 

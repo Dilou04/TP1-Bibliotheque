@@ -1,7 +1,4 @@
 #include "emprunt.h"
-#include "date.h"
-#include "livre.h"
-#include "lecteur.h"
 
 Date Emprunt::getDateEmprunt(){
     return dateEmprunt_;

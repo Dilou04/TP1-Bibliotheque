@@ -5,8 +5,22 @@
 #include <string>
 #include "auteur.h"
 #include <vector>
+#include <ostream>
 
 class Livre {
+    
+    public:
+        std::string titre();
+        std::string auteur();
+        std::string langue();
+        std ::string genre();
+        std::string isbn();
+        std::string getIsbn();
+        Livre(std::string titre, Auteur auteur, std::string langue, std::string genre, std::string isbn);
+        
+        bool isDispo(std::string isbn, std::vector<std::string> isbnLivreDispo);
+        friend std::ostream& operator<<(std::ostream& os, const Livre& liv);
+    
     private:
         Auteur auteur_;
         std::string titre_;
@@ -19,20 +33,5 @@ class Livre {
         std::string isbn_;
         std::vector<std::string> isbnLivreDispo_;
         std::vector<std::string> isbnLivrePasDispo_;
-
-
-    public:
-        std::string titre();
-        std::string auteur();
-        std::string langue();
-        std ::string genre();
-        std::string isbn();
-        std::string getTitre();
-        Auteur getAuteur();
-        std::string getLangue();
-        std::string getGenre();
-        std::string getIsbn();
-        Livre(std::string titre, Auteur auteur, std::string langue, std::string genre, std::string isbn);
-        bool isDispo(std::string isbn, std::vector<std::string> isbnLivreDispo);
 };
 #endif

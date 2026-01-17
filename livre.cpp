@@ -1,23 +1,5 @@
 #include "livre.h"
-#include "date.h"
-#include "auteur.h"
-#include "emprunt.h"
 
-
-std::string Livre::getTitre(){
-    return titre_;
-}
-
-Auteur Livre::getAuteur(){
-    return auteur_;
-}
-
-std::string Livre::getLangue(){
-    return langue_;
-}
-std::string Livre::getGenre(){
-    return genre_;
-}
 std::string Livre::getIsbn(){
     return isbn_;
 }
@@ -32,4 +14,9 @@ bool Livre::isDispo(std::string isbn, std::vector<std::string> isbnLivreDispo){
         }
     }
     return true;
+}
+
+std::ostream& operator<<(std::ostream& os, const Livre& liv){
+    os << "Le livre est : " << liv.titre_ << " écrit par : " << liv.auteur_ << " et c'est : " << liv.genre_ << " sont isbn est :" << liv.isbn_ << std::endl;
+    return os;
 }

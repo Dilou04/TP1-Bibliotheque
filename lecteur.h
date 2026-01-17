@@ -11,10 +11,7 @@ class Lecteur{
         Lecteur(std::string prenom, std::string nom, std::string id);
         std::string prenom();
         std::string nom();
-        std::string id();
-        std::string getNom();
-        std::string getPrenom();
-        std::string getId();        
+        std::string id();     
 
         friend std::ostream& operator<<(std::ostream& os, const Lecteur& lec);
         

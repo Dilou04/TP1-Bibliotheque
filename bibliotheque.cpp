@@ -1,7 +1,4 @@
 #include "bibliotheque.h"
-#include "emprunt.h"
-#include "lecteur.h"
-#include <vector>
 
 Bibliotheque::Bibliotheque(std::vector<Lecteur> lecteurs, std::vector<Livre> livres, std::vector<Emprunt> emprunts): lecteurs_(lecteurs), livres_(livres), emprunts_(emprunts){
 
@@ -29,4 +26,12 @@ void Bibliotheque::addLivre(Livre liv){
 
 void Bibliotheque::addAuteur(Auteur aut){
     auteurs_.push_back(aut);
+}
+
+std::ostream& operator<<(std::ostream& os, const Bibliotheque& biblio){
+    os << "Les lecteurs sont : "; 
+    for (int i = 0; i < biblio.lecteurs_.size(); i++ ){
+        os << biblio.lecteurs_[i] << std::endl;
+    }
+    return os;
 }

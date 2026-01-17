@@ -9,6 +9,7 @@
 #include "emprunt.h"
 #include "lecteur.h"
 #include "auteur.h"
+#include <ostream>
 
 class Bibliotheque{
     public:
@@ -19,9 +20,11 @@ class Bibliotheque{
         std::vector<Lecteur> lecteurs();
         std::vector<Livre> livres();
         std::vector<Emprunt> emprunts();
+        
         void addLecteur(Lecteur lec);
         void addLivre(Livre liv);
         void addAuteur(Auteur aut);
+        friend std::ostream& operator<<(std::ostream& os, const Bibliotheque& biblio);
 
         
     private:
